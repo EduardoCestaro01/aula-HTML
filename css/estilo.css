@@ -1,0 +1,95 @@
+
+h1 {
+    color: rgb(0, 255, 251);
+    font-size: 24px;
+    text-align: center;
+} /* fim h1 */
+
+ul {
+    list-style: none; /* remove marcador */
+    border: 4px solid; /* cria uma borda solida */
+    border-color: gray; /* cor da borda */
+    background-color: lightgrey; /* plano de fundo */
+    padding: 4px; /* margem interna */
+} /* fim ul */
+ul li {
+    background-color: yellow;
+}
+/* Estilo da galeria */
+ul {
+    list-style: none;
+}
+ul li {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 4px;
+    margin: 4px;
+}
+
+.titulo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22pt;
+    color: midnightblue;
+    text-align: center;
+    margin-bottom: 4px;
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio da Semana</title>
+    <link rel="stylesheet" href="css/estilo3.css">
+</head>
+<body>
+    <h1>Cardápio da Semana</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Data</th>
+                <th>Prato</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="imagens_restaurante/pratofeito.jpg" alt="Foto do prato 1" width="350" ></td>
+                <td>Segunda-feira</td>
+                <td>Prato Feito</td>
+                <td>Arroz, feijão, picadinho, batata frita e salada.</td>
+            </tr>
+            <tr>
+                <td><img src="imagens_restaurante/lasanhadefrango.jpg" alt="Foto do prato 2" width="350" ></td>
+                <td>Terça-feira</td>
+                <td>Lasanha</td>
+                <td>Lasanha de frango.</td>
+            </tr>
+            <tr>
+                <td><img src="imagens_restaurante/strogonoff.jpg" alt="Foto do prato 3" width="350" ></td>
+                <td>Quarta-feira</td>
+                <td>Strogonoff</td>
+                <td>Arroz, strogonoff e batata palha.</td>
+            </tr>
+            <tr>
+                <td><img src="imagens_restaurante/comidajaponesa.jpg" alt="Foto do prato 4" width="350" ></td>
+                <td>Quinta-feira</td>
+                <td>Comida japonesa</td>
+                <td>Joy de salmão, niguiri de salmão e uramaki de salmão.</td>
+            </tr>
+            <tr>
+                <td><img src="imagens_restaurante/feijoada.jpg" alt="Foto do prato 5" width="350" ></td>
+                <td>Sexta-feira</td>
+                <td>Feijoada</td>
+                <td>Arroz, feijoada, couve refogada, farofa e laranja.</td>
+            </tr>
+            </tbody>
+    </table>
+</body>
+</html>
+}
