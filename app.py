@@ -5,9 +5,12 @@ app = Flask(__name__) # cria uma instância
 
 @app.route("/", methods=('GET',)) #Assina una rota
 
-def index(): # função responsável pela página
+def index():
+    nome = 'Eduardo'
+    return f"""<h1>Página inicial</h1>
+    <p>Olá {nome}, que nome bonito!"""
 
- return "<h1>Página inicial</h1> <p>Eu sou fulano</p> <hr> " # HTML retornado
+
 
 @app.route("/galeria", methods=('GET',))
 def galeria():
