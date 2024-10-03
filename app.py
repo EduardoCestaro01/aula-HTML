@@ -1,4 +1,4 @@
-from flask import Flask # import
+from flask import (Flask, request) # import
 
 
 app = Flask(__name__) # cria uma instância
@@ -6,7 +6,7 @@ app = Flask(__name__) # cria uma instância
 @app.route("/", methods=('GET',)) #Assina una rota
 
 def index():
-    nome = 'Eduardo'
+    nome = request.args.get('nome')
     return f"""<h1>Página inicial</h1>
     <p>Olá {nome}, que nome bonito!"""
 
