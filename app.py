@@ -29,17 +29,21 @@ def area(largura, comprimento: float):
     <h1> A área informada> L={largura}* A={comprimento}  Area={largura*comprimento}
     </h1>"""
 
-@app.route("/par_ou_impar", methods=('GET',))
-def par_ou_impar():
-  numero = float(request.args.get('n'))
+@app.route("/parimpar/<float:numero>", methods=('GET',))
+def parimpar(numero):
   if numero % 2 == 0:
     return f"O número {numero} é par."
   else:
     return f"O número {numero} é ímpar."
-  
-@app.route("/sobrenome", methods=('GET',))
-def nomesobrenome():
-  nome = request.args.get('nome')
-  sobrenome = request.args.get('sobrenome')
-  return f"""<h1> sobrenome </h1>
+    
+    
+@app.route("/nome/<string:nome>/<string:sobrenome>", methods=('GET',))
+def nomesobrenome(nome,sobrenome):
+    return f"""<h1> sobrenome </h1>
   <p>{sobrenome},{nome}</p>"""
+
+@app.route("/potencia/<float:numero>/<float:elevado>")
+def potencia(numero: float, elevado:float):
+    return f""" 
+    <h1> A potencia informada> N={numero}** E={elevado}  Potencia={numero**elevado}
+    </h1>"""
