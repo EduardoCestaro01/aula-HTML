@@ -1,4 +1,4 @@
-from flask import (Flask, request) # import
+from flask import (Flask , request) # import
 
 
 app = Flask(__name__) # cria uma instância
@@ -23,12 +23,10 @@ def contato():
 @app.route("/sobre", methods=('GET',))
 def sobre():
     return "<h1>Sobre</h1>"
-@app.route("/area")
-def area():
-    altura= float (request.args.get('a'))
-    largura= float (request.args.get('l'))
+@app.route("/area/<float:largura>/<float:comprimento>")
+def area(largura, comprimento: float):
     return f""" 
-    <h1> A área informada> L={largura}* A={altura}  Area={largura*altura}
+    <h1> A área informada> L={largura}* A={comprimento}  Area={largura*comprimento}
     </h1>"""
 
 @app.route("/par_ou_impar", methods=('GET',))
