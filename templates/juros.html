@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form>
+    <label>Digite o investimento inicial</label> <br>
+    <input type="number" name="capital" /> <br>
+
+    <label>Digite o valor do juros ao ano</label> <br>
+    <input type="number" name="juros" /> <br>
+
+    <label>Digite o tempo de investimento em meses</label> <br>
+    <input type="number" name="tempo" /> <br>
+
+    <label>Digite o deposito mensal</label> <br> 
+    <input type="number" name="deposito" /> <br>
+
+    <button type="submit">Calcular</button>
+
+</form>
+
+{% if capital and juros and tempo and deposito %}
+   <h1>{{capital*(1+((juros/100)/12)**tempo + deposito*tempo)}}</h1>
+{% endif %}
+
+{% endblock %}

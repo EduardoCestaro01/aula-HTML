@@ -55,5 +55,30 @@ def tabuada(num = None):
     if'num' in request.args:
        num = request.args.get('num')
        num= int(request.args.get('num'))
-
     return render_template('tabuada.html', num=num)
+
+@app.route("/juros")
+@app.route("/juros/<num>", methods=['GET'])
+def juros(juros = None, capital = None, tempo= None, deposito= None):
+
+    if'juros' and 'capital' and 'tempo' and 'deposito' in request.args:
+       juros= int(request.args.get('juros'))
+       capital= int(request.args.get('juros'))
+       tempo= int(request.args.get('juros'))
+       deposito= int(request.args.get('juros'))
+    return render_template('juros.html', juros=juros, capital=capital, tempo=tempo, deposito=deposito)
+
+
+@app.route("/login", methods=("GET",))
+def login(email=None, senha=None):
+  if "email" and "senha" in request.args:
+    email = request.args.get("email")
+    senha = request.args.get("senha")
+  return render_template("login.html", email=email, senha=senha)
+
+@app.route("/imc", methods=("GET",))
+def imc(peso = None, altura= None):
+  if "peso" and "altura" in request.args:
+    peso =float(request.args.get('peso')) 
+    altura=float(request.args.get('altura'))
+  return render_template("imc.html", peso=peso, altura=altura)
